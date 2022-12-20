@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  div(class="body-header")
+    h1= title
+    a(href="/new")
+      button(class="add-button") Send a message
+  p Welcome to #{title}
+
+  br
+
+  ul
+    each message in messages
+      li
+        div(class="message-header")
+          h3=message.user
+          h4=message.added
+        p=message.text

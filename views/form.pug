@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  div(class="body-header")
+    h1 New Message
+    a(href="/")
+      button(class="cancel-button") Cancel
+
+  br
+
+  form(method="POST", action="/new")
+    label(for="username")="Username: "
+    br
+    input(type="text", placeholder="Username" name="messageUser")
+    br
+    label(for="message")="Message: "
+    br
+    input(type="text", placeholder="Message" name="messageText")
+    br
+    input(type="submit", name="subtmit", class="submitBtn" )
